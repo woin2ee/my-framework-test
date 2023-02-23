@@ -12,3 +12,4 @@ let greetingMessage = GreetingGenerator.generate()
 
 print(greetingMessage + "!!")
 
+print("!!!")
