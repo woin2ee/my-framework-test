@@ -20,7 +20,7 @@ print("!!!")
 
 class KoreanGreetingGenerator: GreetingGenerator {
     
-    override init() { // public 인데 어떻게 override?
+    override init() { // public 인데 어떻게 override? --> 애초에 public 밖에 안됨
         print("init")
     }
     
