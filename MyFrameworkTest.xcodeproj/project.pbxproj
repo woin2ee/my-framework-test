@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DADDEE2D29A75E0B00D31B02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADDEE2C29A75E0B00D31B02 /* main.swift */; };
+		DADDEE6929A76F4E00D31B02 /* MyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADDEE6729A76ED600D31B02 /* MyFramework.framework */; };
+		DADDEE6A29A76F4E00D31B02 /* MyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DADDEE6729A76ED600D31B02 /* MyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -20,11 +22,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		DADDEE6529A76E1300D31B02 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DADDEE6A29A76F4E00D31B02 /* MyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DADDEE2929A75E0B00D31B02 /* MyFrameworkTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyFrameworkTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADDEE2C29A75E0B00D31B02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DADDEE6729A76ED600D31B02 /* MyFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MyFramework.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DADDEE6929A76F4E00D31B02 /* MyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DADDEE2B29A75E0B00D31B02 /* MyFrameworkTest */,
+				DADDEE6629A76EBE00D31B02 /* Frameworks */,
 				DADDEE2A29A75E0B00D31B02 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -62,6 +78,14 @@
 			path = MyFrameworkTest;
 			sourceTree = "<group>";
 		};
+		DADDEE6629A76EBE00D31B02 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DADDEE6729A76ED600D31B02 /* MyFramework.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -72,6 +96,7 @@
 				DADDEE2529A75E0B00D31B02 /* Sources */,
 				DADDEE2629A75E0B00D31B02 /* Frameworks */,
 				DADDEE2729A75E0B00D31B02 /* CopyFiles */,
+				DADDEE6529A76E1300D31B02 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,6 +271,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AVC8X7323;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -257,6 +286,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2AVC8X7323;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import MyFramework
 
-print("Hello, World!")
+let greetingMessage = GreetingGenerator.generate()
+
+print(greetingMessage + "!!")
 
